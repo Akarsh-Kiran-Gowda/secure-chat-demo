@@ -1,0 +1,290 @@
+/* ═══════════════════════════════════════════════════════
+   Secure Chat Demo – Minimal CSS
+   Monospace, terminal-inspired aesthetic for a CNS lab.
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  --bg:        #0d1117;
+  --surface:   #161b22;
+  --border:    #30363d;
+  --accent:    #58a6ff;
+  --green:     #3fb950;
+  --red:       #f85149;
+  --yellow:    #d29922;
+  --text:      #c9d1d9;
+  --muted:     #8b949e;
+  --font:      "Courier New", Courier, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header h1 { font-size: 14px; color: var(--accent); letter-spacing: 1px; }
+header .badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.badge-tls    { border-color: var(--green); color: var(--green); }
+.badge-e2e    { border-color: var(--accent); color: var(--accent); }
+.badge-off    { border-color: var(--red);   color: var(--red);   }
+.badge-mitm   { border-color: var(--yellow); color: var(--yellow); }
+
+/* ── Layout ───────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Panels ───────────────────────────────────────────── */
+.panel {
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.panel:last-child { border-right: none; border-left: 1px solid var(--border); }
+
+.panel-title {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 6px 12px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Sidebar – Room List ──────────────────────────────── */
+#room-list { flex: 1; overflow-y: auto; padding: 8px; }
+.room-item {
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+.room-item:hover  { background: var(--surface); }
+.room-item.active { background: #1f2937; color: var(--accent); }
+
+/* ── Sidebar controls ─────────────────────────────────── */
+.sidebar-controls { padding: 8px; border-top: 1px solid var(--border); }
+.sidebar-controls input, .sidebar-controls button {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* ── Chat area ────────────────────────────────────────── */
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.msg {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-left: 3px solid var(--border);
+  line-height: 1.5;
+}
+.msg.own     { border-left-color: var(--accent); }
+.msg.system  { border-left-color: var(--muted); color: var(--muted); font-style: italic; }
+.msg.error   { border-left-color: var(--red);   color: var(--red); }
+.msg.warning { border-left-color: var(--yellow); color: var(--yellow); }
+
+.msg-meta { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+.msg-body { word-break: break-word; }
+
+/* ── Input bar ────────────────────────────────────────── */
+.input-bar {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+.input-bar input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: var(--font);
+  font-size: 13px;
+}
+.input-bar input:focus { outline: none; border-color: var(--accent); }
+.input-bar label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
+button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 12px;
+  white-space: nowrap;
+}
+button:hover { border-color: var(--accent); color: var(--accent); }
+button.danger { border-color: var(--red); color: var(--red); }
+button.danger:hover { background: #2d1214; }
+button.primary { background: #0d3060; border-color: var(--accent); color: var(--accent); }
+button.primary:hover { background: #1a4a8a; }
+
+input[type="text"], input[type="file"] {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-family: var(--font);
+  font-size: 12px;
+}
+input[type="text"]:focus { outline: none; border-color: var(--accent); }
+
+/* ── Security Panel ───────────────────────────────────── */
+.security-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.toggle-group { padding: 10px; border-bottom: 1px solid var(--border); }
+.toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.toggle-label span { color: var(--muted); font-size: 11px; }
+
+/* Toggle switch */
+.switch { position: relative; display: inline-block; width: 36px; height: 18px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; inset: 0;
+  background: #333; border-radius: 18px; transition: 0.2s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 14px; height: 14px;
+  left: 2px; bottom: 2px;
+  background: var(--text);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+input:checked + .slider { background: var(--green); }
+input:checked + .slider::before { transform: translateX(18px); }
+.switch.danger input:checked + .slider { background: var(--red); }
+.switch.warning input:checked + .slider { background: var(--yellow); }
+
+/* ── Security Monitor ─────────────────────────────────── */
+#security-monitor {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px;
+}
+.sec-event {
+  font-size: 11px;
+  padding: 4px 6px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  border-left: 3px solid var(--border);
+}
+.sec-event.MITM_INTERCEPT  { border-color: var(--yellow); background: #1a1600; }
+.sec-event.MITM_MODIFY     { border-color: var(--red);    background: #1a0000; }
+.sec-event.REPLAY_BLOCKED  { border-color: var(--green);  background: #001a06; }
+.sec-event.REPLAY_ATTEMPT  { border-color: var(--yellow); background: #1a1600; }
+.sec-event.INTEGRITY_FAILED{ border-color: var(--red);    background: #1a0000; }
+
+.monitor-controls { padding: 8px; border-top: 1px solid var(--border); }
+.monitor-controls button { width: 100%; margin-top: 4px; }
+
+/* ── Modal ────────────────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 320px;
+  max-width: 480px;
+}
+.modal h2 { font-size: 14px; color: var(--accent); margin-bottom: 14px; }
+.modal label { display: block; margin-bottom: 4px; font-size: 12px; color: var(--muted); }
+.modal input  { width: 100%; margin-bottom: 10px; }
+.modal .actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+
+/* ── Token display ────────────────────────────────────── */
+.token-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 4px;
+  word-break: break-all;
+  font-size: 11px;
+  color: var(--green);
+  margin: 8px 0;
+  cursor: pointer;
+}
+.token-box:hover { border-color: var(--accent); }
+
+/* ── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Status dot ───────────────────────────────────────── */
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+.dot.green  { background: var(--green); }
+.dot.red    { background: var(--red); }
+.dot.yellow { background: var(--yellow); }

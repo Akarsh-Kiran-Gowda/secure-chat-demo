@@ -1,0 +1,271 @@
+[2026-03-16 20:17:50] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:17:50] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:18:15] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:18:15] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:18:15] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-03-16 20:18:36] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:18:36] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:24:47] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:24:47] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:24:47] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-03-16 20:25:28] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:25:28] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:30:40] INFO     app.services.room_service – [ROOM] Created room=1b4583b324cf08d2 owner=akg
+[2026-03-16 20:30:40] INFO     app.controllers.room_controller – [ROOM] Created room=1b4583b324cf08d2 owner=akg
+[2026-03-16 20:30:40] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:31:10] WARNING  app.services.room_service – [ROOM] Invalid invite token | user=jls
+[2026-03-16 20:31:18] INFO     app.services.room_service – [ROOM] jls joined room=1b4583b324cf08d2
+[2026-03-16 20:31:18] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 20:31:51] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=True
+[2026-03-16 20:31:53] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=False
+[2026-03-16 20:31:59] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 20:32:13] INFO     app.services.file_service – [FILE] Saved encrypted file | room=1b4583b324cf08d2 sender=jls file=resume.pdf
+[2026-03-16 20:32:13] INFO     app.controllers.file_controller – [FILE] Uploaded file=resume.pdf room=1b4583b324cf08d2 sender=jls
+[2026-03-16 20:32:20] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:32:41] INFO     app.services.room_service – [ROOM] akg joined room=1b4583b324cf08d2
+[2026-03-16 20:32:41] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:32:50] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 20:33:02] INFO     app.services.file_service – [FILE] Saved encrypted file | room=1b4583b324cf08d2 sender=jls file=resume.pdf
+[2026-03-16 20:33:02] INFO     app.controllers.file_controller – [FILE] Uploaded file=resume.pdf room=1b4583b324cf08d2 sender=jls
+[2026-03-16 20:33:14] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:33:46] INFO     app.services.room_service – [ROOM] akg joined room=1b4583b324cf08d2
+[2026-03-16 20:33:46] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:34:12] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=True
+[2026-03-16 20:34:33] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 20:34:35] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 20:34:37] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 20:34:49] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 20:35:09] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 20:35:14] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=bow
+[2026-03-16 20:35:14] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:35:14] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:35:14] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=4d84e6de
+[2026-03-16 20:35:14] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:35:14] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:35:14] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:35:24] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=4d84e6de
+[2026-03-16 20:35:24] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=bow||MITM_INJECTED||
+[2026-03-16 20:35:24] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:35:24] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:35:24] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=4d84e6de
+[2026-03-16 20:35:24] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:35:24] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:35:24] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:35:26] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=4d84e6de
+[2026-03-16 20:35:26] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=bow||MITM_INJECTED||||MITM_INJECTED||
+[2026-03-16 20:35:26] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:35:26] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:35:26] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=4d84e6de
+[2026-03-16 20:35:26] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:35:26] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:35:26] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:35:31] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=4d84e6de
+[2026-03-16 20:35:31] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=bow||MITM_INJECTED||||MITM_INJECTED||||MITM_INJECTED||
+[2026-03-16 20:35:31] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:35:31] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:35:31] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=4d84e6de
+[2026-03-16 20:35:31] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:35:31] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:35:31] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:42:42] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:42:42] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 20:42:42] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-03-16 20:42:54] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 20:42:54] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 20:43:22] INFO     app.services.room_service – [ROOM] jls joined room=1b4583b324cf08d2
+[2026-03-16 20:43:22] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 20:43:37] INFO     app.services.room_service – [ROOM] akg joined room=1b4583b324cf08d2
+[2026-03-16 20:43:37] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 20:43:52] INFO     app.services.file_service – [FILE] Saved encrypted file | room=1b4583b324cf08d2 sender=akg file=resume.pdf
+[2026-03-16 20:43:52] INFO     app.controllers.file_controller – [FILE] Uploaded file=resume.pdf room=1b4583b324cf08d2 sender=akg
+[2026-03-16 20:43:56] INFO     app.services.file_service – [FILE] Decrypted file | message=b1ae0effb4e2988a4a1818d3
+[2026-03-16 20:52:16] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 20:52:17] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=True
+[2026-03-16 20:53:19] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 20:55:11] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=False
+[2026-03-16 20:55:12] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 20:55:13] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 20:55:17] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=False
+[2026-03-16 20:55:18] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 20:55:19] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 20:55:46] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=bbbb
+[2026-03-16 20:55:46] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:55:46] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:55:46] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:55:46] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:55:46] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:56:16] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=jls | content=eyJpdiI6IndXVGtGSVBWejU4dERHMTciLCJjdCI6IkZ1L2ZNWmFjMEpseVBZ
+[2026-03-16 20:56:16] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=jls
+[2026-03-16 20:56:16] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=jls
+[2026-03-16 20:56:16] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=jls
+[2026-03-16 20:56:16] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=jls room=1b4583b324cf08d2
+[2026-03-16 20:56:16] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:56:22] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 20:56:23] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 20:56:29] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=jls | content=eeee
+[2026-03-16 20:56:29] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=jls
+[2026-03-16 20:56:29] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=jls
+[2026-03-16 20:56:29] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=jls
+[2026-03-16 20:56:29] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=jls room=1b4583b324cf08d2
+[2026-03-16 20:56:29] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 20:57:09] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 20:57:13] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 20:57:14] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 20:57:21] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 20:57:21] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 20:57:21] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 20:57:21] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 20:57:21] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 21:05:56] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 21:05:56] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 21:05:57] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-03-16 21:06:03] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 21:06:03] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 21:07:40] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 21:07:43] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 21:07:58] INFO     app.services.room_service – [ROOM] akg joined room=1b4583b324cf08d2
+[2026-03-16 21:07:58] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 21:08:19] INFO     app.services.room_service – [ROOM] jls joined room=1b4583b324cf08d2
+[2026-03-16 21:08:19] INFO     app.websocket.websocket_manager – [WS] Connected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 21:08:34] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 21:08:38] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=True
+[2026-03-16 21:08:44] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:08:47] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:08:50] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=False
+[2026-03-16 21:08:53] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 21:08:53] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:09:03] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=jls | content=hi bby
+[2026-03-16 21:09:03] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=jls
+[2026-03-16 21:09:03] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=jls
+[2026-03-16 21:09:03] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=jls
+[2026-03-16 21:09:03] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=jls room=1b4583b324cf08d2
+[2026-03-16 21:09:03] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 21:09:35] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=akg | content=oye
+[2026-03-16 21:09:35] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akg
+[2026-03-16 21:09:35] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | sender=akg
+[2026-03-16 21:09:35] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=akg
+[2026-03-16 21:09:35] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=akg room=1b4583b324cf08d2
+[2026-03-16 21:09:35] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 21:28:11] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=jls
+[2026-03-16 21:28:11] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1b4583b324cf08d2 user=akg
+[2026-03-16 21:28:11] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-03-16 21:28:15] INFO     app.main – === Secure Chat Demo starting ===
+[2026-03-16 21:28:15] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-03-16 21:28:31] INFO     app.services.room_service – [ROOM] Created room=dfa2d3da740fe6a3 owner=akarsh
+[2026-03-16 21:28:31] INFO     app.controllers.room_controller – [ROOM] Created room=dfa2d3da740fe6a3 owner=akarsh
+[2026-03-16 21:28:31] INFO     app.websocket.websocket_manager – [WS] Connected | room=dfa2d3da740fe6a3 user=akarsh
+[2026-03-16 21:29:00] INFO     app.services.room_service – [ROOM] gaya joined room=dfa2d3da740fe6a3
+[2026-03-16 21:29:00] INFO     app.websocket.websocket_manager – [WS] Connected | room=dfa2d3da740fe6a3 user=gaya
+[2026-03-16 21:29:50] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:29:55] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 21:30:14] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=True
+[2026-03-16 21:30:14] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=False
+[2026-03-16 21:30:20] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 21:30:24] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-03-16 21:30:29] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=gaya | content=hello
+[2026-03-16 21:30:29] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:30:29] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:30:51] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=True
+[2026-03-16 21:30:55] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=True
+[2026-03-16 21:31:01] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=gaya | content=hell
+[2026-03-16 21:31:01] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:31:01] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=False | sender=gaya
+[2026-03-16 21:31:01] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=gaya
+[2026-03-16 21:31:01] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=gaya room=dfa2d3da740fe6a3
+[2026-03-16 21:31:01] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-03-16 21:31:31] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=False
+[2026-03-16 21:31:32] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 21:31:38] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=False
+[2026-03-16 21:31:46] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:31:46] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:31:46] ERROR    app.services.chat_service – [SECURITY] Decryption failed – AES-GCM decryption failed – ciphertext was tampered or corrupted
+[2026-03-16 21:31:46] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: AES-GCM decryption failed – ciphertext was tampered or corrupted
+[2026-03-16 21:33:18] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:33:18] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:33:18] ERROR    app.services.chat_service – [SECURITY] Decryption failed – AES-GCM decryption failed – ciphertext was tampered or corrupted
+[2026-03-16 21:33:18] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: AES-GCM decryption failed – ciphertext was tampered or corrupted
+[2026-03-16 21:33:27] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 21:33:31] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=gaya | content=check
+[2026-03-16 21:33:31] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:33:31] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:33:39] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 21:33:41] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:33:41] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:33:50] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 21:33:50] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:33:53] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=gaya
+[2026-03-16 21:33:53] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=gaya
+[2026-03-16 21:34:00] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akarsh
+[2026-03-16 21:34:00] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=akarsh
+[2026-03-16 21:34:09] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-03-16 21:34:10] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=True
+[2026-03-16 21:34:12] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=False
+[2026-03-16 21:34:13] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-03-16 21:34:15] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=akarsh
+[2026-03-16 21:34:15] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=akarsh
+[2026-03-16 21:34:46] INFO     app.services.file_service – [FILE] Saved encrypted file | room=dfa2d3da740fe6a3 sender=gaya file=Privacy-Preserving Data Masking Techniques for Large Language Models_ A Review with a Practical PII Pipeline.pdf
+[2026-03-16 21:34:46] INFO     app.controllers.file_controller – [FILE] Uploaded file=Privacy-Preserving Data Masking Techniques for Large Language Models_ A Review with a Practical PII Pipeline.pdf room=dfa2d3da740fe6a3 sender=gaya
+[2026-03-16 21:34:53] INFO     app.services.file_service – [FILE] Decrypted file | message=db5b3fd248daf41e3e6a001a
+[2026-03-16 21:34:58] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=dfa2d3da740fe6a3 user=gaya
+[2026-03-16 21:35:00] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=dfa2d3da740fe6a3 user=akarsh
+[2026-03-16 21:35:03] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-04-23 22:11:49] INFO     app.main – === Secure Chat Demo starting ===
+[2026-04-23 22:11:50] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-04-23 22:13:33] INFO     app.main – === Secure Chat Demo shutting down ===
+[2026-04-23 22:13:42] INFO     app.main – === Secure Chat Demo starting ===
+[2026-04-23 22:13:42] INFO     app.storage.database – Database initialised at D:\cns\secure_chat_demo\database\chat.db
+[2026-04-23 22:15:22] ERROR    asyncio – Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-04-23 22:15:50] ERROR    asyncio – Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-04-23 22:16:17] INFO     app.services.room_service – [ROOM] Created room=1f3fbbe09ad892a4 owner=alice
+[2026-04-23 22:16:17] INFO     app.controllers.room_controller – [ROOM] Created room=1f3fbbe09ad892a4 owner=alice
+[2026-04-23 22:16:18] INFO     app.websocket.websocket_manager – [WS] Connected | room=1f3fbbe09ad892a4 user=alice
+[2026-04-23 22:16:50] INFO     app.services.room_service – [ROOM] bob joined room=1f3fbbe09ad892a4
+[2026-04-23 22:16:51] INFO     app.websocket.websocket_manager – [WS] Connected | room=1f3fbbe09ad892a4 user=bob
+[2026-04-23 22:17:14] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=True
+[2026-04-23 22:17:26] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1f3fbbe09ad892a4 user=alice
+[2026-04-23 22:17:45] INFO     app.services.room_service – [ROOM] alice joined room=1f3fbbe09ad892a4
+[2026-04-23 22:17:46] INFO     app.websocket.websocket_manager – [WS] Connected | room=1f3fbbe09ad892a4 user=alice
+[2026-04-23 22:17:55] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=False
+[2026-04-23 22:17:56] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=True
+[2026-04-23 22:18:05] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_mitm=True
+[2026-04-23 22:18:05] INFO     app.controllers.security_controller – [SECURITY] Config updated: simulate_replay=True
+[2026-04-23 22:18:09] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=9a0090c3
+[2026-04-23 22:18:09] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=alice
+[2026-04-23 22:18:09] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=False | sender=alice
+[2026-04-23 22:18:09] WARNING  app.security.hash_integrity – [SECURITY] Integrity violation – hash mismatch | sender=alice
+[2026-04-23 22:18:09] WARNING  app.services.chat_service – [SECURITY] Integrity check FAILED | sender=alice room=1f3fbbe09ad892a4
+[2026-04-23 22:18:09] WARNING  app.websocket.websocket_manager – [SECURITY] Message rejected: Integrity check failed – message may be tampered
+[2026-04-23 22:18:14] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=9a0090c3
+[2026-04-23 22:18:23] INFO     app.controllers.security_controller – [SECURITY] Config updated: tls_enabled=False
+[2026-04-23 22:18:23] INFO     app.controllers.security_controller – [SECURITY] Config updated: e2e_enabled=False
+[2026-04-23 22:18:24] INFO     app.controllers.security_controller – [SECURITY] Config updated: replay_protection_enabled=False
+[2026-04-23 22:18:26] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=9a0090c3
+[2026-04-23 22:18:28] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Message captured for replay | nonce=0843eeda
+[2026-04-23 22:18:28] WARNING  app.attack_simulation.mitm_attack – [ATTACK/MITM] Plaintext intercepted | sender=alice | content=hi
+[2026-04-23 22:18:28] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM intercepted message | sender=alice
+[2026-04-23 22:18:28] WARNING  app.attack_simulation.mitm_attack – [SECURITY] MITM modified message | forge_hash=True | sender=alice
+[2026-04-23 22:18:31] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:33] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:35] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:39] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:49] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:53] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:57] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:18:58] WARNING  app.attack_simulation.replay_attack – [ATTACK/REPLAY] Replaying captured message | nonce=0843eeda
+[2026-04-23 22:19:06] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1f3fbbe09ad892a4 user=bob
+[2026-04-23 22:19:08] INFO     app.websocket.websocket_manager – [WS] Disconnected | room=1f3fbbe09ad892a4 user=alice
+[2026-04-23 22:19:10] INFO     app.main – === Secure Chat Demo shutting down ===

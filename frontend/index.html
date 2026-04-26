@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Chat Demo – CNS Lab</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header>
+  <h1>&#9679; SECURE CHAT DEMO</h1>
+  <span id="badge-tls"  class="badge badge-off">TLS OFF</span>
+  <span id="badge-e2e"  class="badge badge-e2e">E2E ON</span>
+  <span id="badge-rp"   class="badge badge-e2e">REPLAY PROT ON</span>
+  <span id="badge-mitm" class="badge badge-off" style="display:none">MITM SIMULATED</span>
+  <span style="margin-left:auto;color:var(--muted);font-size:11px">
+    Computer Network Security Lab
+  </span>
+</header>
+
+<!-- ── Main Layout ─────────────────────────────────────────── -->
+<div class="layout">
+
+  <!-- ── LEFT: Room list + join/create ─────────────────────── -->
+  <div class="panel">
+    <div class="panel-title">Rooms</div>
+    <div id="room-list"></div>
+
+    <div class="sidebar-controls">
+      <input type="text" id="username-input" placeholder="Your username" value="" />
+      <button class="primary" onclick="openCreateModal()">+ Create Room</button>
+      <button onclick="openJoinModal()">Join Room</button>
+    </div>
+  </div>
+
+  <!-- ── CENTER: Chat area ─────────────────────────────────── -->
+  <div class="panel chat-area">
+    <div class="panel-title" id="chat-title">No room selected</div>
+    <div id="messages"></div>
+
+    <div class="input-bar">
+      <input type="text" id="msg-input" placeholder="Type a message…"
+             onkeydown="if(event.key==='Enter') sendMessage()" disabled />
+      <label title="Attach file">
+        📎
+        <input type="file" id="file-input" style="display:none" onchange="uploadFile()" />
+      </label>
+      <button onclick="sendMessage()" id="send-btn" disabled>Send</button>
+    </div>
+  </div>
+
+  <!-- ── RIGHT: Security panel + monitor ───────────────────── -->
+  <div class="panel security-panel">
+    <div class="panel-title">Security Controls</div>
+
+    <div class="toggle-group">
+
+      <!-- TLS -->
+      <div class="toggle-label">
+        TLS Transport
+        <label class="switch">
+          <input type="checkbox" id="toggle-tls" onchange="updateSecurity('tls_enabled', this.checked)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- E2E -->
+      <div class="toggle-label">
+        End-to-End Encryption
+        <label class="switch">
+          <input type="checkbox" id="toggle-e2e" checked onchange="updateSecurity('e2e_enabled', this.checked)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Replay Protection -->
+      <div class="toggle-label">
+        Replay Protection
+        <label class="switch">
+          <input type="checkbox" id="toggle-rp" checked onchange="updateSecurity('replay_protection_enabled', this.checked)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- MITM simulation -->
+      <div class="toggle-label">
+        Simulate MITM Attack
+        <label class="switch warning">
+          <input type="checkbox" id="toggle-mitm" onchange="updateSecurity('simulate_mitm', this.checked)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Replay simulation -->
+      <div class="toggle-label">
+        Simulate Replay Attack
+        <label class="switch danger">
+          <input type="checkbox" id="toggle-replay" onchange="updateSecurity('simulate_replay', this.checked)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div><!-- /toggle-group -->
+
+    <div class="panel-title">Security Monitor</div>
+    <div id="security-monitor"></div>
+
+    <div class="monitor-controls">
+      <button class="danger" onclick="triggerReplay()">&#9654; Trigger Replay Now</button>
+      <button onclick="clearMonitor()">Clear Monitor</button>
+    </div>
+  </div>
+
+</div><!-- /layout -->
+
+<!-- ── Create Room Modal ───────────────────────────────────── -->
+<div class="modal-overlay" id="create-modal">
+  <div class="modal">
+    <h2>Create New Room</h2>
+    <label>Your username</label>
+    <input type="text" id="create-username" placeholder="alice" />
+    <button class="primary" onclick="createRoom()">Create Room</button>
+    &nbsp;
+    <button onclick="closeModal('create-modal')">Cancel</button>
+    <!-- Token display (shown after creation) -->
+    <div id="token-section" style="display:none">
+      <p style="color:var(--muted);font-size:11px;margin:10px 0 4px">
+        Share this invite token (shown once only):
+      </p>
+      <div class="token-box" id="invite-token-display"
+           onclick="copyToken()" title="Click to copy"></div>
+      <p style="font-size:10px;color:var(--muted)">Click to copy</p>
+      <button class="primary" onclick="closeModal('create-modal')">Enter Room</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Join Room Modal ─────────────────────────────────────── -->
+<div class="modal-overlay" id="join-modal">
+  <div class="modal">
+    <h2>Join a Room</h2>
+    <label>Your username</label>
+    <input type="text" id="join-username" placeholder="bob" />
+    <label>Invite token</label>
+    <input type="text" id="join-token" placeholder="paste invite token here" />
+    <div class="actions">
+      <button onclick="closeModal('join-modal')">Cancel</button>
+      <button class="primary" onclick="joinRoom()">Join</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/chat.js"></script>
+<script src="/static/security_panel.js"></script>
+</body>
+</html>
